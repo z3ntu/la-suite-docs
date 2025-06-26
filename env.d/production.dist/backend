@@ -3,6 +3,7 @@ DJANGO_ALLOWED_HOSTS=${DOCS_HOST}
 DJANGO_SECRET_KEY=<generate a random key>
 DJANGO_SETTINGS_MODULE=impress.settings
 DJANGO_CONFIGURATION=Production
+DJANGO_CELERY_BROKER_URL=redis://valkey:6379/0
 
 # Logging
 # Set to DEBUG level for dev only
@@ -25,6 +26,9 @@ DJANGO_EMAIL_FROM=<your email address>
 
 DJANGO_EMAIL_BRAND_NAME="La Suite Numérique" 
 DJANGO_EMAIL_LOGO_IMG="https://${DOCS_HOST}/assets/logo-suite-numerique.png"  
+
+# Cache
+REDIS_URL=redis://valkey:6379/1
 
 # Media
 AWS_S3_ENDPOINT_URL=https://${S3_HOST}
